@@ -1,0 +1,11 @@
+export CLICOLOR=1
+export LSCOLORS=GxBxhxDxfxhxhxhxhxcxcx
+export PS1="\[\e[0;33m\]\u@\H:[\w] $\[\e[m\] "
+alias ls='/bin/ls -GFh'
+export NODE_OPTIONS="--max-old-space-size=4096"
+eval "$(nodenv init -)"
+
+# include .bashrc if it exists
+if [ -f $HOME/.bashrc ]; then
+    . $HOME/.bashrc
+fi
